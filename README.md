@@ -76,7 +76,8 @@ The downloads are about 210 MB for `small`, 620 MB for `medium` and 2.7 GB for `
 
 You can also put a model file in that folder by hand. Use a file from `v1/` of the
 [HF repo](https://huggingface.co/DamRsn/muscriptor-gguf), unchanged and with its original name (e.g.
-`muscriptor-medium-f16.gguf`). NeuralNote only picks up files whose name and size match the ones it downloads.
+`muscriptor-medium-f16.gguf`). NeuralNote picks up a non-empty file with a recognized model name regardless of its
+size; the checkpoint still needs to use a format supported by NeuralNote.
 
 You can remove a model by deleting it from this folder, and re-download it at any time.
 

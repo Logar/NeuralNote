@@ -47,10 +47,7 @@ inline constexpr const char* RECORDING_FILENAME_PREFIX = "recorded_audio";
 /** The checkpoint for inModelSize, whether or not it is installed. */
 juce::File getModelFile(ModelSize inModelSize);
 
-/**
- * Whether the checkpoint is there with the size this build downloads. A file of any other size is
- * unfinished or from another release, and downloading replaces it.
- */
+/** Whether a non-empty checkpoint file exists, including a locally supplied custom model. */
 bool isModelInstalled(ModelSize inModelSize);
 
 bool isAnyModelInstalled();

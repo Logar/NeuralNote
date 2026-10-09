@@ -54,8 +54,8 @@ juce::File getModelFile(ModelSize inModelSize)
 
 bool isModelInstalled(ModelSize inModelSize)
 {
-    // getSize is 0 for a file that does not exist, and no checkpoint is empty.
-    return getModelFile(inModelSize).getSize() == getModelManifestEntry(inModelSize).numBytes;
+    const juce::File model_file = getModelFile(inModelSize);
+    return model_file.existsAsFile() && model_file.getSize() > 0;
 }
 
 bool isAnyModelInstalled()
